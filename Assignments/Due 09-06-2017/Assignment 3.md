@@ -22,34 +22,78 @@ Part 3: Upload your assignment to GitHub
 
 ## Answers
 
-#### 35. Consider the following pseudocode.
+### 35. 
+Consider the following pseudocode.
          
-          repeat
-          i = 1
-          read a value for x
-          if ((x < 5.0) and (2x < 10.7)) or ("5x > 5.1) then
-           write the value of x
-          end if
-          increase i by 1
-          until i > 5
+        repeat
+        i = 1
+        read a value for x
+        if ((x < 5.0) and (2x < 10.7)) or (sqrt(5x) > 5.1) then
+         write the value of x
+        end if
+        increase i by 1
+        until i > 5
    The input values for x are 1.0, 5.1, 2.4, 7.2, and 5.3. What are the output values?
 
-          //x = 1.0
-          if ((TRUE) and (TRUE)) or (FALSE)
-          //pseudocode will print 1.0
+        //x = 1.0
+        if ((TRUE) and (TRUE)) or (FALSE)
+        //pseudocode will print 1.0
 
-          //x = 5.1
-          if ((FALSE) and (TRUE)) or (TRUE)
-          //pseudocode will print 5.1
+        //x = 5.1
+        if ((FALSE) and (TRUE)) or (FALSE)
+        //pseudocode will not print
 
-          //x = 2.4
-          if ((TRUE) and (TRUE)) or (TRUE)
-          //pseudocode will print 2.4
+        //x = 2.4
+        if ((TRUE) and (TRUE)) or (FALSE)
+        //pseudocode will print 2.4
 
-          //x = 7.2
-          if ((FALSE) and (FALSE)) or (TRUE)
-          //pseudocode will print 7.2
+        //x = 7.2
+        if ((FALSE) and (FALSE)) or (TRUE)
+        //pseudocode will print 7.2
 
-          //x = 5.3
-          if ((FALSE) and (TRUE)) or (TRUE)
-          //pseudocode will print 5.3
+        //x = 5.3
+        if ((FALSE) and (TRUE)) or (TRUE)
+        //pseudocode will print 5.3
+          
+###  37. 
+Rewrite the following statement form with a simplified conditional expression, where the function odd(n)
+returns true if n is odd.
+
+    if not((Value1 < Value2) or odd(Number))
+    or (not(Value1 < Value2) and odd(Number)) then
+    statement1
+    else
+    statement2
+    end if
+
+- A = (Value1 < Value2)
+- B = odd(Number)
+- P = (A v B)'
+- Q = (A' ^ B)
+- R = P v Q
+    
+| A | B | P | Q | R |
+|---|---|---|---|---|
+| T | T | F | F | F |
+| T | F | F | F | F |
+| F | T | F | T | T |
+| F | F | T | F | T |
+
+R is logically equivalent to (A'), thus:
+
+    if not(Value1 < Value2) then
+    statement1
+    else
+    statement2
+    end if
+    
+### 38. 
+You want your program to execute statement 1 when A is false, B is false, and C is true, and to execute
+statement 2 otherwise. You wrote
+
+    if not(A and B) and C then
+    statement 1
+    else
+    statement 2
+    end if
+ Does this do what you want?
