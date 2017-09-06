@@ -54,7 +54,7 @@ Consider the following pseudocode.
         //x = 5.3
         if ((FALSE) and (TRUE)) or (TRUE)
         //pseudocode will print 5.3
-          
+___________________________________________          
 ###  37. 
 Rewrite the following statement form with a simplified conditional expression, where the function odd(n)
 returns true if n is odd.
@@ -65,7 +65,7 @@ returns true if n is odd.
     else
     statement2
     end if
-
+    
 - A = (Value1 < Value2)
 - B = odd(Number)
 - P = (A v B)'
@@ -79,14 +79,15 @@ returns true if n is odd.
 | F | T | F | T | T |
 | F | F | T | F | T |
 
-R is logically equivalent to (A'), thus:
+__R is logically equivalent to (A'), thus:__
 
     if not(Value1 < Value2) then
     statement1
     else
     statement2
     end if
-    
+
+________________________________________________
 ### 38. 
 You want your program to execute statement 1 when A is false, B is false, and C is true, and to execute
 statement 2 otherwise. You wrote
@@ -97,3 +98,7 @@ statement 2 otherwise. You wrote
     statement 2
     end if
  Does this do what you want?
+ 
+    ((FALSE and FALSE)' and TRUE) == TRUE
+    
+__The statement will execute correctly.__
