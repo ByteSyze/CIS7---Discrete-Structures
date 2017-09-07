@@ -12,13 +12,13 @@ Part 2: Reading & Exercises
   - [ ] Do Review Questions (in file "Assignment 1" created above):
     - [X] #35
     - [X] #37 - 38
-    - [ ] #61 - 64
+    - [X] #61 - 64
 
 Part 3: Upload your assignment to GitHub
 
-  - [ ] git commit -am "assignment 3"
-  - [ ] git push
-  - [ ] Email james.wilson@rccd.edu to indicate that the assignment is complete
+  - [X] git commit -am "assignment 3"
+  - [X] git push
+  - [X] Email james.wilson@rccd.edu to indicate that the assignment is complete
 
 ## Answers
 
@@ -137,5 +137,40 @@ teller.” Is Merlin a liar or a truth teller? What about Meredith? Explain your
 | F | T | T | F |
 | F | F | T | F |
 
-In any case when Merlin is lying, her statement is true (which is a contradiction). Thus, Merlin must be a truth-teller. Merlin's statement is only false when Merlin is a truth-teller and Meredith is a liar, but that contradicts the fact that she is a truth-teller. Therefore, Both Merlin and Meredith are truth-tellers.
+In any case when Merlin is lying, her statement is true (which is a contradiction). Thus, Merlin must be a truth-teller. Merlin's statement is only false when Merlin is a truth-teller and Meredith is a liar, but that contradicts the fact that Merlin is a truth-teller. Therefore, Both Merlin and Meredith are truth-tellers.
 
+### 63.
+Next, you meet Rothwold and Grymlin. Rothwold says, “Either I am a liar or Grymlin is a truth teller.” Is
+Rothwold a liar or a truth teller? What about Grymlin? Explain your answer
+
+- A = Rothwold is a truth-teller
+- B = Grymlin is a truth-teller
+- P = A' v B ("I am a liar or Grymlin is a truth teller")
+- Q = P <-> A (Accounts for contradictions; P can only be true or false if Rothwold is a truth-teller or a liar, respectively)
+
+| A | B | P | Q |
+|---|---|---|---|
+| T | T | T | T |
+| T | F | F | F |
+| F | T | T | F |
+| F | F | T | F |
+
+The explanation for this answer is exactly the same as the answer for __#62.__ This makes sense because Rothwold's statement is logically equivalent to Merlin's statement (using the implication rule.)
+
+### 64.
+Finally, you meet Gwendolyn and Merrilaine. Gwendolin says, “I am a liar but Merrilaine is not.” Is
+Gwendolyn a liar or a truth teller? What about Merrilaine?
+
+- A = Gwendolyn is a truth-teller
+- B = Merrilaine is a truth-teller
+- P = A' ^ B ("I am a liar but Merrilaine is a truth teller")
+- Q = P <-> A (Accounts for contradictions; P can only be true or false if Gwendolyn is a truth-teller or a liar, respectively)
+
+| A | B | P | Q |
+|---|---|---|---|
+| T | T | F | F |
+| T | F | F | F |
+| F | T | T | F |
+| F | F | F | T |
+
+When Gwendolyn is a truth-teller, his statement is false. Thus, Gwendolyn must be a liar. When Gwendolyn is a liar and Merrilaine is a truth-teller, Gwendolyn's statement is true (thereby contradicting the fact that Gwendolyn is a liar.) Both Gwendolyn and Merrilaine are liars. BAM!
