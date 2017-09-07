@@ -11,7 +11,7 @@ Part 2: Reading & Exercises
   - [X] Read Chapter 1.1: Statements, Symbolic Representation, and Tautologies
   - [ ] Do Review Questions (in file "Assignment 1" created above):
     - [X] #35
-    - [ ] #37 - 38
+    - [X] #37 - 38
     - [ ] #61 - 64
 
 Part 3: Upload your assignment to GitHub
@@ -102,3 +102,40 @@ statement 2 otherwise. You wrote
     ((FALSE and FALSE)' and TRUE) == TRUE
     
 __The statement will execute correctly.__
+
+### 61. 
+You meet two of the inhabitants of this country, Percival and Llewellyn. Percival says, “At least one of us
+is a liar.” Is Percival a liar or a truth teller? What about Llewellyn? Explain your answer.
+
+- A = Percival is a truth-teller
+- B = Llewellyn is a truth-teller
+- P = A' v B' ("At least on of us is a liar")
+- Q = P <-> A (Accounts for contradictions; P can only be true if Percival is a truth-teller)
+
+| A | B | P | Q |
+|---|---|---|---|
+| T | T | F | F |
+| T | F | T | T |
+| F | T | T | F |
+| F | F | T | F |
+
+In order for Q to be true, Percival must be a truth-teller and Llewellyn is a liar.
+
+### 62.
+Traveling on, you meet Merlin and Meredith. Merlin says, “If I am a truth teller, then Meredith is a truth
+teller.” Is Merlin a liar or a truth teller? What about Meredith? Explain your answer.
+
+- A = Merlin is a truth-teller
+- B = Meredith is a truth-teller
+- P = A -> B ("If I am a truth teller, Meredith is a truth-teller")
+- Q = P <-> A (Accounts for contradictions; P can only be true or false if Merlin is a truth-teller or a liar, respectively)
+
+| A | B | P | Q |
+|---|---|---|---|
+| T | T | T | T |
+| T | F | F | F |
+| F | T | T | F |
+| F | F | T | F |
+
+In any case when Merlin is lying, her statement is true (which is a contradiction). Thus, Merlin must be a truth-teller. Merlin's statement is only false when Merlin is a truth-teller and Meredith is a liar, but that contradicts the fact that she is a truth-teller. Therefore, Both Merlin and Meredith are truth-tellers.
+
